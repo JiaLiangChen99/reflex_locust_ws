@@ -1,9 +1,13 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "reflex-locust-ws"
 version = "0.1.0"
 description = "WebSocket load testing for Reflex apps via Locust (/_event Socket.IO)"
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.13"
 keywords = ["reflex", "locust", "load-testing", "websocket", "performance"]
 dependencies = [
@@ -19,9 +23,13 @@ Issues = "https://github.com/JiaLiangChen99/reflex_locust_ws/issues"
 
 [project.optional-dependencies]
 report = ["matplotlib>=3.8"]
+dev = ["matplotlib>=3.8", "pytest>=8"]
 
 [project.scripts]
 reflex-locust-ws = "reflex_locust_ws.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["reflex_locust_ws*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests/unit"]
