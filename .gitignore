@@ -1,0 +1,18 @@
+.states
+assets/external/
+*.db
+*.py[cod]
+.web
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Load test artifacts
+tests/load/reports/
